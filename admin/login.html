@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In — Apple Tours & Safaris Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+<div class="login-page">
+
+  <!-- Cinematic Background -->
+  <div class="login-bg">
+    <img src="../assets/heroimages/safarihero6.png" alt="Zanzibar" class="login-bg-img">
+    <div class="login-bg-overlay"></div>
+    <div class="login-bg-content">
+      <p class="login-bg-quote">"Every great journey begins with a single step — and the right team behind you."</p>
+      <div class="login-bg-meta">
+        <div class="login-bg-dot"></div>
+        Trusted by 8,500+ travellers across 45 countries
+      </div>
+      <div style="margin-top:32px;display:flex;gap:24px">
+        <div style="text-align:center">
+          <div style="font-size:1.5rem;font-weight:700;color:#fff;letter-spacing:-.04em">354</div>
+          <div style="font-size:.7rem;color:rgba(255,255,255,.45);margin-top:2px;letter-spacing:.05em;text-transform:uppercase">Bookings YTD</div>
+        </div>
+        <div style="width:1px;background:rgba(255,255,255,.15)"></div>
+        <div style="text-align:center">
+          <div style="font-size:1.5rem;font-weight:700;color:#C9A84C;letter-spacing:-.04em">$184k</div>
+          <div style="font-size:.7rem;color:rgba(255,255,255,.45);margin-top:2px;letter-spacing:.05em;text-transform:uppercase">Revenue 2025</div>
+        </div>
+        <div style="width:1px;background:rgba(255,255,255,.15)"></div>
+        <div style="text-align:center">
+          <div style="font-size:1.5rem;font-weight:700;color:#fff;letter-spacing:-.04em">4.9★</div>
+          <div style="font-size:.7rem;color:rgba(255,255,255,.45);margin-top:2px;letter-spacing:.05em;text-transform:uppercase">Avg Rating</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Login Panel -->
+  <div class="login-panel">
+    <img src="../assets/logo/logo.png" alt="Apple Tours & Safaris" class="login-logo">
+
+    <h1 class="login-heading">Welcome back</h1>
+    <p class="login-sub">Sign in to your operations portal</p>
+
+    <form id="loginForm" novalidate>
+      <label class="login-label" for="email">Email address</label>
+      <input class="login-input" type="email" id="email" name="email"
+        placeholder="admin@applesafaris.com" required autocomplete="username">
+
+      <label class="login-label" for="password">Password</label>
+      <input class="login-input" type="password" id="password" name="password"
+        placeholder="Enter your password" required autocomplete="current-password">
+
+      <div class="login-row">
+        <label class="login-remember">
+          <input type="checkbox" name="remember"> Keep me signed in
+        </label>
+        <a href="#" class="login-forgot">Forgot password?</a>
+      </div>
+
+      <button type="submit" class="login-btn">
+        <span class="login-btn-text">Sign in to Portal</span>
+        <div class="login-spinner"></div>
+      </button>
+    </form>
+
+    <div class="login-divider"></div>
+    <p class="login-footer">
+      Access restricted to authorised Apple Tours staff.<br>
+      Need access? <a href="mailto:admin@applesafaris.com">Contact your administrator</a>
+    </p>
+    <p style="text-align:center;margin-top:24px;font-size:.7rem;color:var(--gray-400)">
+      © 2025 Apple Tours & Safaris · v2.0.1
+    </p>
+  </div>
+</div>
+
+<script src="js/admin.js"></script>
+</body>
+</html>
