@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customers — Apple Tours Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+<div class="admin-layout" id="adminLayout">
+
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-header">
+    <div class="sidebar-logo-wrap">
+      <img src="../assets/optimized/admin-logo-mark.png" alt="Apple Tours" class="sidebar-logo">
+      <div class="sidebar-brand"><div class="sidebar-brand-name">Apple Tours</div><div class="sidebar-brand-sub">Admin Portal</div></div>
+    </div>
+    <button class="sidebar-toggle-btn" id="sidebarToggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+  </div>
+  <nav class="sidebar-nav">
+    <div class="nav-section">
+      <a href="dashboard.html" class="nav-item"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg></span><span class="nav-label">Dashboard</span></a>
+    </div>
+    <div class="nav-section">
+      <div class="nav-section-label">Operations</div>
+      <a href="customers.html" class="nav-item active"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><span class="nav-label">Customers</span><span class="nav-badge">12</span></a>
+      <a href="bookings.html" class="nav-item"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span><span class="nav-label">Bookings</span><span class="nav-badge">7</span></a>
+    </div>
+    <div class="nav-section">
+      <div class="nav-section-label">Services</div>
+      <a href="tours.html" class="nav-item"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg></span><span class="nav-label">Tours</span></a>
+      <a href="excursions.html" class="nav-item"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg></span><span class="nav-label">Excursions</span></a>
+      <a href="safari-packages.html" class="nav-item"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></span><span class="nav-label">Safari Packages</span></a>
+      <a href="hotels.html" class="nav-item"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span><span class="nav-label">Hotels</span></a>
+      <a href="transfers.html" class="nav-item"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></span><span class="nav-label">Transfers</span></a>
+      <a href="visa-services.html" class="nav-item"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span><span class="nav-label">Visa Services</span></a>
+    </div>
+    <div class="nav-section">
+      <div class="nav-section-label">Finance</div>
+      <a href="payments.html" class="nav-item"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></span><span class="nav-label">Payments</span></a>
+    </div>
+    <div class="nav-section">
+      <div class="nav-section-label">Marketing</div>
+      <a href="subscribers.html" class="nav-item"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span><span class="nav-label">Email Subscribers</span></a>
+      <a href="blog.html" class="nav-item"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span><span class="nav-label">Blog Manager</span></a>
+      <a href="testimonials.html" class="nav-item"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span><span class="nav-label">Testimonials</span></a>
+    </div>
+    <div class="nav-section">
+      <div class="nav-section-label">Website</div>
+      <a href="content.html" class="nav-item"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg></span><span class="nav-label">Website Content</span></a>
+      <a href="analytics.html" class="nav-item"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></span><span class="nav-label">Analytics</span></a>
+    </div>
+    <div class="nav-section">
+      <div class="nav-section-label">Admin</div>
+      <a href="staff.html" class="nav-item"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><span class="nav-label">Staff</span></a>
+      <a href="settings.html" class="nav-item"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></span><span class="nav-label">Settings</span></a>
+    </div>
+  </nav>
+  <div class="sidebar-footer">
+    <div class="sidebar-user">
+      <div class="sidebar-avatar">SA</div>
+      <div class="sidebar-user-info"><div class="sidebar-user-name">Super Admin</div><div class="sidebar-user-role">Administrator</div></div>
+    </div>
+  </div>
+</aside>
+
+<div class="admin-main">
+  <header class="topbar">
+    <button class="topbar-mobile-toggle" id="mobileSidebarToggle"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    <nav class="topbar-breadcrumb" style="flex:1">
+      <a href="dashboard.html">Dashboard</a>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      <span class="current">Customers</span>
+    </nav>
+    <div class="topbar-search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="search" placeholder="Search customers...">
+    </div>
+    <div class="topbar-actions">
+      <button class="topbar-action-btn" title="Notifications"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg><span class="notif-dot"></span></button>
+      <a href="../index.html" target="_blank" class="topbar-action-btn" title="View website"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+    </div>
+    <div class="topbar-user"><div class="topbar-avatar">SA</div><span class="topbar-user-name">Admin</span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div>
+  </header>
+
+  <main class="admin-content">
+
+    <div class="page-header">
+      <div>
+        <h1 class="page-title">Customers</h1>
+        <p class="page-sub">47 total customers · 12 new this month</p>
+      </div>
+      <div class="page-header-actions">
+        <button class="btn btn-outline" onclick="toast('Exporting CSV...','success')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Export CSV
+        </button>
+        <button class="btn btn-primary" onclick="openModal('addCustomerModal')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg>
+          Add Customer
+        </button>
+      </div>
+    </div>
+
+    <!-- STATUS TABS -->
+    <div class="status-tabs">
+      <button class="status-tab active" data-filter="all">All <span class="tab-count">47</span></button>
+      <button class="status-tab" data-filter="new">New <span class="tab-count">12</span></button>
+      <button class="status-tab" data-filter="contacted">Contacted <span class="tab-count">8</span></button>
+      <button class="status-tab" data-filter="confirmed">Confirmed <span class="tab-count">11</span></button>
+      <button class="status-tab" data-filter="paid">Paid <span class="tab-count">9</span></button>
+      <button class="status-tab" data-filter="completed">Completed <span class="tab-count">5</span></button>
+      <button class="status-tab" data-filter="cancelled">Cancelled <span class="tab-count">2</span></button>
+    </div>
+
+    <!-- TOOLBAR -->
+    <div class="card" style="padding:14px 20px;margin-bottom:16px;display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+      <div class="search-box" style="flex:1;min-width:200px">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="search" placeholder="Search by name, email, phone…">
+      </div>
+      <select class="form-select" style="min-width:140px">
+        <option>All Countries</option>
+        <option>United Kingdom</option>
+        <option>United States</option>
+        <option>Germany</option>
+        <option>Australia</option>
+        <option>Tanzania</option>
+      </select>
+      <select class="form-select" style="min-width:140px">
+        <option>All Sources</option>
+        <option>WhatsApp</option>
+        <option>Website</option>
+        <option>Referral</option>
+        <option>Walk-in</option>
+      </select>
+    </div>
+
+    <!-- CUSTOMERS TABLE -->
+    <div class="card" style="overflow:hidden">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th style="width:36px"><input type="checkbox"></th>
+            <th>Customer</th>
+            <th>Contact</th>
+            <th>Country</th>
+            <th>Source</th>
+            <th>Bookings</th>
+            <th>Total Spent</th>
+            <th>Status</th>
+            <th>Joined</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-status="confirmed" data-search="sarah chen sarah@example.com +447890123456 united kingdom website">
+            <td><input type="checkbox"></td>
+            <td>
+              <div style="display:flex;align-items:center;gap:10px">
+                <div class="avatar av-1">SC</div>
+                <div><div style="font-weight:500;color:var(--charcoal)">Sarah Chen</div><div style="font-size:.75rem;color:var(--gray-500)">sarah@example.com</div></div>
+              </div>
+            </td>
+            <td><a href="https://wa.me/447890123456" target="_blank" style="color:var(--forest);font-size:.82rem;display:flex;align-items:center;gap:4px"><svg width="13" height="13" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>+44 789 012 3456</a></td>
+            <td><span style="font-size:.82rem">🇬🇧 United Kingdom</span></td>
+            <td><span class="badge" style="background:#EFF6FF;color:#1D4ED8">Website</span></td>
+            <td><span style="font-weight:600;color:var(--charcoal)">3</span></td>
+            <td><span style="font-weight:600;color:var(--forest)">$2,840</span></td>
+            <td><span class="badge badge-confirmed">Confirmed</span></td>
+            <td style="font-size:.78rem;color:var(--gray-500)">Mar 12, 2026</td>
+            <td><button class="btn-icon" onclick="openPanel('customerPanel')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button></td>
+          </tr>
+          <tr data-status="paid" data-search="james okonkwo james@example.com +2348012345678 nigeria whatsapp">
+            <td><input type="checkbox"></td>
+            <td>
+              <div style="display:flex;align-items:center;gap:10px">
+                <div class="avatar av-2">JO</div>
+                <div><div style="font-weight:500;color:var(--charcoal)">James Okonkwo</div><div style="font-size:.75rem;color:var(--gray-500)">james.o@example.com</div></div>
+              </div>
+            </td>
+            <td><a href="https://wa.me/2348012345678" target="_blank" style="color:var(--forest);font-size:.82rem;display:flex;align-items:center;gap:4px"><svg width="13" height="13" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>+234 801 234 5678</a></td>
+            <td><span style="font-size:.82rem">🇳🇬 Nigeria</span></td>
+            <td><span class="badge" style="background:#F0FDF4;color:#15803D">WhatsApp</span></td>
+            <td><span style="font-weight:600;color:var(--charcoal)">1</span></td>
+            <td><span style="font-weight:600;color:var(--forest)">$1,200</span></td>
+            <td><span class="badge badge-paid">Paid</span></td>
+            <td style="font-size:.78rem;color:var(--gray-500)">Apr 3, 2026</td>
+            <td><button class="btn-icon" onclick="openPanel('customerPanel')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button></td>
+          </tr>
+          <tr data-status="new" data-search="emma mueller emma@example.de +491234567890 germany website">
+            <td><input type="checkbox"></td>
+            <td>
+              <div style="display:flex;align-items:center;gap:10px">
+                <div class="avatar av-3">EM</div>
+                <div><div style="font-weight:500;color:var(--charcoal)">Emma Müller</div><div style="font-size:.75rem;color:var(--gray-500)">emma@example.de</div></div>
+              </div>
+            </td>
+            <td><span style="font-size:.82rem;color:var(--gray-600)">+49 123 456 7890</span></td>
+            <td><span style="font-size:.82rem">🇩🇪 Germany</span></td>
+            <td><span class="badge" style="background:#EFF6FF;color:#1D4ED8">Website</span></td>
+            <td><span style="font-weight:600;color:var(--charcoal)">0</span></td>
+            <td><span style="font-weight:600;color:var(--gray-400)">—</span></td>
+            <td><span class="badge badge-new">New</span></td>
+            <td style="font-size:.78rem;color:var(--gray-500)">May 20, 2026</td>
+            <td><button class="btn-icon" onclick="openPanel('customerPanel')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button></td>
+          </tr>
+          <tr data-status="completed" data-search="david miller david@example.com +16175550199 united states referral">
+            <td><input type="checkbox"></td>
+            <td>
+              <div style="display:flex;align-items:center;gap:10px">
+                <div class="avatar av-4">DM</div>
+                <div><div style="font-weight:500;color:var(--charcoal)">David Miller</div><div style="font-size:.75rem;color:var(--gray-500)">david@example.com</div></div>
+              </div>
+            </td>
+            <td><span style="font-size:.82rem;color:var(--gray-600)">+1 617 555 0199</span></td>
+            <td><span style="font-size:.82rem">🇺🇸 United States</span></td>
+            <td><span class="badge" style="background:#FDF4FF;color:#7C3AED">Referral</span></td>
+            <td><span style="font-weight:600;color:var(--charcoal)">5</span></td>
+            <td><span style="font-weight:600;color:var(--forest)">$6,450</span></td>
+            <td><span class="badge badge-completed">Completed</span></td>
+            <td style="font-size:.78rem;color:var(--gray-500)">Jan 8, 2026</td>
+            <td><button class="btn-icon" onclick="openPanel('customerPanel')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button></td>
+          </tr>
+          <tr data-status="contacted" data-search="aisha hassan aisha@example.ae +971501234567 uae whatsapp">
+            <td><input type="checkbox"></td>
+            <td>
+              <div style="display:flex;align-items:center;gap:10px">
+                <div class="avatar av-5">AH</div>
+                <div><div style="font-weight:500;color:var(--charcoal)">Aisha Hassan</div><div style="font-size:.75rem;color:var(--gray-500)">aisha@example.ae</div></div>
+              </div>
+            </td>
+            <td><a href="https://wa.me/971501234567" target="_blank" style="color:var(--forest);font-size:.82rem;display:flex;align-items:center;gap:4px"><svg width="13" height="13" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>+971 50 123 4567</a></td>
+            <td><span style="font-size:.82rem">🇦🇪 UAE</span></td>
+            <td><span class="badge" style="background:#F0FDF4;color:#15803D">WhatsApp</span></td>
+            <td><span style="font-weight:600;color:var(--charcoal)">1</span></td>
+            <td><span style="font-weight:600;color:var(--gray-400)">Pending</span></td>
+            <td><span class="badge badge-contacted">Contacted</span></td>
+            <td style="font-size:.78rem;color:var(--gray-500)">May 18, 2026</td>
+            <td><button class="btn-icon" onclick="openPanel('customerPanel')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button></td>
+          </tr>
+          <tr data-status="new" data-search="luca ferrari luca@example.it +393201234567 italy website">
+            <td><input type="checkbox"></td>
+            <td>
+              <div style="display:flex;align-items:center;gap:10px">
+                <div class="avatar av-6">LF</div>
+                <div><div style="font-weight:500;color:var(--charcoal)">Luca Ferrari</div><div style="font-size:.75rem;color:var(--gray-500)">luca@example.it</div></div>
+              </div>
+            </td>
+            <td><span style="font-size:.82rem;color:var(--gray-600)">+39 320 123 4567</span></td>
+            <td><span style="font-size:.82rem">🇮🇹 Italy</span></td>
+            <td><span class="badge" style="background:#EFF6FF;color:#1D4ED8">Website</span></td>
+            <td><span style="font-weight:600;color:var(--charcoal)">0</span></td>
+            <td><span style="font-weight:600;color:var(--gray-400)">—</span></td>
+            <td><span class="badge badge-new">New</span></td>
+            <td style="font-size:.78rem;color:var(--gray-500)">May 22, 2026</td>
+            <td><button class="btn-icon" onclick="openPanel('customerPanel')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button></td>
+          </tr>
+          <tr data-status="paid" data-search="sophie martin sophie@example.fr +33612345678 france referral">
+            <td><input type="checkbox"></td>
+            <td>
+              <div style="display:flex;align-items:center;gap:10px">
+                <div class="avatar av-7">SM</div>
+                <div><div style="font-weight:500;color:var(--charcoal)">Sophie Martin</div><div style="font-size:.75rem;color:var(--gray-500)">sophie@example.fr</div></div>
+              </div>
+            </td>
+            <td><span style="font-size:.82rem;color:var(--gray-600)">+33 6 12 34 56 78</span></td>
+            <td><span style="font-size:.82rem">🇫🇷 France</span></td>
+            <td><span class="badge" style="background:#FDF4FF;color:#7C3AED">Referral</span></td>
+            <td><span style="font-weight:600;color:var(--charcoal)">2</span></td>
+            <td><span style="font-weight:600;color:var(--forest)">$3,100</span></td>
+            <td><span class="badge badge-paid">Paid</span></td>
+            <td style="font-size:.78rem;color:var(--gray-500)">Feb 14, 2026</td>
+            <td><button class="btn-icon" onclick="openPanel('customerPanel')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button></td>
+          </tr>
+          <tr data-status="cancelled" data-search="john smith john@example.com +61412345678 australia website">
+            <td><input type="checkbox"></td>
+            <td>
+              <div style="display:flex;align-items:center;gap:10px">
+                <div class="avatar av-8">JS</div>
+                <div><div style="font-weight:500;color:var(--charcoal)">John Smith</div><div style="font-size:.75rem;color:var(--gray-500)">john@example.com</div></div>
+              </div>
+            </td>
+            <td><span style="font-size:.82rem;color:var(--gray-600)">+61 412 345 678</span></td>
+            <td><span style="font-size:.82rem">🇦🇺 Australia</span></td>
+            <td><span class="badge" style="background:#EFF6FF;color:#1D4ED8">Website</span></td>
+            <td><span style="font-weight:600;color:var(--charcoal)">1</span></td>
+            <td><span style="font-weight:600;color:var(--gray-400)">Refunded</span></td>
+            <td><span class="badge badge-cancelled">Cancelled</span></td>
+            <td style="font-size:.78rem;color:var(--gray-500)">Apr 29, 2026</td>
+            <td><button class="btn-icon" onclick="openPanel('customerPanel')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button></td>
+          </tr>
+          <tr data-status="confirmed" data-search="priya sharma priya@example.in +919876543210 india whatsapp">
+            <td><input type="checkbox"></td>
+            <td>
+              <div style="display:flex;align-items:center;gap:10px">
+                <div class="avatar av-3">PS</div>
+                <div><div style="font-weight:500;color:var(--charcoal)">Priya Sharma</div><div style="font-size:.75rem;color:var(--gray-500)">priya@example.in</div></div>
+              </div>
+            </td>
+            <td><a href="https://wa.me/919876543210" target="_blank" style="color:var(--forest);font-size:.82rem;display:flex;align-items:center;gap:4px"><svg width="13" height="13" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>+91 987 654 3210</a></td>
+            <td><span style="font-size:.82rem">🇮🇳 India</span></td>
+            <td><span class="badge" style="background:#F0FDF4;color:#15803D">WhatsApp</span></td>
+            <td><span style="font-weight:600;color:var(--charcoal)">2</span></td>
+            <td><span style="font-weight:600;color:var(--forest)">$1,980</span></td>
+            <td><span class="badge badge-confirmed">Confirmed</span></td>
+            <td style="font-size:.78rem;color:var(--gray-500)">Apr 11, 2026</td>
+            <td><button class="btn-icon" onclick="openPanel('customerPanel')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button></td>
+          </tr>
+          <tr data-status="new" data-search="roberto silva roberto@example.br +5511912345678 brazil social media">
+            <td><input type="checkbox"></td>
+            <td>
+              <div style="display:flex;align-items:center;gap:10px">
+                <div class="avatar av-1">RS</div>
+                <div><div style="font-weight:500;color:var(--charcoal)">Roberto Silva</div><div style="font-size:.75rem;color:var(--gray-500)">roberto@example.br</div></div>
+              </div>
+            </td>
+            <td><span style="font-size:.82rem;color:var(--gray-600)">+55 11 91234 5678</span></td>
+            <td><span style="font-size:.82rem">🇧🇷 Brazil</span></td>
+            <td><span class="badge" style="background:#FFF7ED;color:#C2410C">Social</span></td>
+            <td><span style="font-weight:600;color:var(--charcoal)">0</span></td>
+            <td><span style="font-weight:600;color:var(--gray-400)">—</span></td>
+            <td><span class="badge badge-new">New</span></td>
+            <td style="font-size:.78rem;color:var(--gray-500)">May 24, 2026</td>
+            <td><button class="btn-icon" onclick="openPanel('customerPanel')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button></td>
+          </tr>
+        </tbody>
+      </table>
+      <div style="padding:16px 20px;display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--gray-100)">
+        <span style="font-size:.8rem;color:var(--gray-500)">Showing 10 of 47 customers</span>
+        <div style="display:flex;gap:6px">
+          <button class="btn-icon">←</button>
+          <button class="btn-icon" style="background:var(--forest);color:#fff">1</button>
+          <button class="btn-icon">2</button>
+          <button class="btn-icon">3</button>
+          <button class="btn-icon">→</button>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+</div>
+
+<!-- CUSTOMER DETAIL PANEL -->
+<div class="detail-panel" id="customerPanel">
+  <div class="detail-panel-header">
+    <div>
+      <h2 class="detail-panel-title">Sarah Chen</h2>
+      <p style="font-size:.8rem;color:var(--gray-500);margin-top:2px">Customer since March 2026</p>
+    </div>
+    <button class="detail-panel-close" onclick="closePanel('customerPanel')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div style="padding:24px;flex:1;overflow-y:auto">
+    <div style="display:flex;align-items:center;gap:16px;margin-bottom:24px">
+      <div class="avatar av-1" style="width:56px;height:56px;font-size:1.1rem">SC</div>
+      <div>
+        <div style="font-weight:600;font-size:1rem;color:var(--charcoal)">Sarah Chen</div>
+        <div style="font-size:.82rem;color:var(--gray-500)">sarah@example.com</div>
+        <span class="badge badge-confirmed" style="margin-top:6px;display:inline-block">Confirmed</span>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px">
+      <div class="card" style="padding:14px;text-align:center">
+        <div style="font-size:1.4rem;font-weight:700;color:var(--forest)">3</div>
+        <div style="font-size:.72rem;color:var(--gray-500);margin-top:2px">Bookings</div>
+      </div>
+      <div class="card" style="padding:14px;text-align:center">
+        <div style="font-size:1.4rem;font-weight:700;color:var(--gold)">$2,840</div>
+        <div style="font-size:.72rem;color:var(--gray-500);margin-top:2px">Total Spent</div>
+      </div>
+    </div>
+
+    <div style="margin-bottom:20px">
+      <div style="font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--gray-400);margin-bottom:10px">Contact</div>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <div style="display:flex;align-items:center;gap:8px;font-size:.83rem;color:var(--charcoal)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--gray-400)" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> sarah@example.com</div>
+        <div style="display:flex;align-items:center;gap:8px;font-size:.83rem;color:var(--charcoal)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--gray-400)" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 3h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 10.91a16 16 0 0 0 6 6l1.27-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 18.18z"/></svg> +44 789 012 3456</div>
+        <div style="display:flex;align-items:center;gap:8px;font-size:.83rem;color:var(--charcoal)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--gray-400)" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> United Kingdom</div>
+      </div>
+    </div>
+
+    <div style="margin-bottom:20px">
+      <div style="font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--gray-400);margin-bottom:10px">Quick Actions</div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <a href="https://wa.me/447890123456" target="_blank" class="btn btn-outline" style="font-size:.78rem;padding:7px 12px">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp
+        </a>
+        <button class="btn btn-outline" style="font-size:.78rem;padding:7px 12px" onclick="toast('Email drafted','success')">Send Email</button>
+        <button class="btn btn-outline" style="font-size:.78rem;padding:7px 12px" onclick="openModal('addBookingModal')">New Booking</button>
+      </div>
+    </div>
+
+    <div>
+      <div style="font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--gray-400);margin-bottom:10px">Timeline</div>
+      <div style="display:flex;flex-direction:column;gap:0">
+        <div style="display:flex;gap:12px;padding-bottom:16px;position:relative">
+          <div style="width:8px;height:8px;border-radius:50%;background:var(--forest);margin-top:4px;flex-shrink:0"></div>
+          <div style="flex:1;padding-bottom:16px;border-bottom:1px solid var(--gray-100)">
+            <div style="font-size:.82rem;font-weight:500;color:var(--charcoal)">Booking confirmed — Zanzibar Excursion Package</div>
+            <div style="font-size:.75rem;color:var(--gray-500);margin-top:2px">May 14, 2026 · $840</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:12px;padding-bottom:16px;position:relative">
+          <div style="width:8px;height:8px;border-radius:50%;background:var(--gold);margin-top:4px;flex-shrink:0"></div>
+          <div style="flex:1;padding-bottom:16px;border-bottom:1px solid var(--gray-100)">
+            <div style="font-size:.82rem;font-weight:500;color:var(--charcoal)">Payment received — Bank Transfer</div>
+            <div style="font-size:.75rem;color:var(--gray-500);margin-top:2px">Apr 28, 2026 · $1,200</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:12px;padding-bottom:16px">
+          <div style="width:8px;height:8px;border-radius:50%;background:var(--gray-300);margin-top:4px;flex-shrink:0"></div>
+          <div style="flex:1">
+            <div style="font-size:.82rem;font-weight:500;color:var(--charcoal)">First inquiry via website form</div>
+            <div style="font-size:.75rem;color:var(--gray-500);margin-top:2px">Mar 12, 2026</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:4px">
+      <div style="font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--gray-400);margin-bottom:8px">Notes</div>
+      <textarea style="width:100%;padding:10px 12px;border:1px solid var(--gray-200);border-radius:8px;font-size:.83rem;font-family:inherit;resize:vertical;min-height:80px;color:var(--charcoal);background:var(--bg)" placeholder="Add a note about this customer...">Prefers morning excursions. Interested in dolphin tour for return visit.</textarea>
+      <button class="btn btn-primary" style="margin-top:8px;font-size:.8rem" onclick="toast('Note saved','success')">Save Note</button>
+    </div>
+  </div>
+</div>
+
+<!-- ADD CUSTOMER MODAL -->
+<div class="modal-overlay" id="addCustomerModal">
+  <div class="modal">
+    <div class="modal-header">
+      <h3 class="modal-title">Add New Customer</h3>
+      <button class="modal-close" onclick="closeModal('addCustomerModal')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    </div>
+    <div class="modal-body">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+        <div class="form-group"><label class="form-label">First Name</label><input class="form-input" type="text" placeholder="Sarah"></div>
+        <div class="form-group"><label class="form-label">Last Name</label><input class="form-input" type="text" placeholder="Chen"></div>
+      </div>
+      <div class="form-group"><label class="form-label">Email Address</label><input class="form-input" type="email" placeholder="sarah@example.com"></div>
+      <div class="form-group"><label class="form-label">WhatsApp / Phone</label><input class="form-input" type="tel" placeholder="+44 789 012 3456"></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+        <div class="form-group"><label class="form-label">Country</label><select class="form-select"><option>Select country…</option><option>United Kingdom</option><option>United States</option><option>Germany</option><option>Australia</option></select></div>
+        <div class="form-group"><label class="form-label">Lead Source</label><select class="form-select"><option>WhatsApp</option><option>Website</option><option>Referral</option><option>Walk-in</option><option>Social Media</option></select></div>
+      </div>
+      <div class="form-group"><label class="form-label">Notes</label><textarea class="form-input" rows="3" placeholder="Any initial notes about this customer…"></textarea></div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-outline" onclick="closeModal('addCustomerModal')">Cancel</button>
+      <button class="btn btn-primary" onclick="toast('Customer added successfully','success');closeModal('addCustomerModal')">Add Customer</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/admin.js"></script>
+</body>
+</html>
