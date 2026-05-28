@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookings — Apple Tours Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+<div class="admin-layout" id="adminLayout">
+
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-header">
+    <div class="sidebar-logo-wrap">
+      <img src="../assets/optimized/admin-logo-mark.png" alt="Apple Tours" class="sidebar-logo">
+      <div class="sidebar-brand"><div class="sidebar-brand-name">Apple Tours</div><div class="sidebar-brand-sub">Admin Portal</div></div>
+    </div>
+    <button class="sidebar-toggle-btn" id="sidebarToggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+  </div>
+  <nav class="sidebar-nav">
+    <div class="nav-section">
+      <a href="dashboard.html" class="nav-item"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg></span><span class="nav-label">Dashboard</span></a>
+    </div>
+    <div class="nav-section">
+      <div class="nav-section-label">Operations</div>
+      <a href="customers.html" class="nav-item"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><span class="nav-label">Customers</span><span class="nav-badge">12</span></a>
+      <a href="bookings.html" class="nav-item active"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span><span class="nav-label">Bookings</span><span class="nav-badge">7</span></a>
+    </div>
+    <div class="nav-section">
+      <div class="nav-section-label">Services</div>
+      <a href="tours.html" class="nav-item"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg></span><span class="nav-label">Tours</span></a>
+      <a href="excursions.html" class="nav-item"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg></span><span class="nav-label">Excursions</span></a>
+      <a href="safari-packages.html" class="nav-item"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></span><span class="nav-label">Safari Packages</span></a>
+      <a href="hotels.html" class="nav-item"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span><span class="nav-label">Hotels</span></a>
+      <a href="transfers.html" class="nav-item"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></span><span class="nav-label">Transfers</span></a>
+      <a href="visa-services.html" class="nav-item"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span><span class="nav-label">Visa Services</span></a>
+    </div>
+    <div class="nav-section">
+      <div class="nav-section-label">Finance</div>
+      <a href="payments.html" class="nav-item"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></span><span class="nav-label">Payments</span></a>
+    </div>
+    <div class="nav-section">
+      <div class="nav-section-label">Marketing</div>
+      <a href="subscribers.html" class="nav-item"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span><span class="nav-label">Email Subscribers</span></a>
+      <a href="blog.html" class="nav-item"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span><span class="nav-label">Blog Manager</span></a>
+      <a href="testimonials.html" class="nav-item"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span><span class="nav-label">Testimonials</span></a>
+    </div>
+    <div class="nav-section">
+      <div class="nav-section-label">Website</div>
+      <a href="content.html" class="nav-item"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg></span><span class="nav-label">Website Content</span></a>
+      <a href="analytics.html" class="nav-item"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></span><span class="nav-label">Analytics</span></a>
+    </div>
+    <div class="nav-section">
+      <div class="nav-section-label">Admin</div>
+      <a href="staff.html" class="nav-item"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><span class="nav-label">Staff</span></a>
+      <a href="settings.html" class="nav-item"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></span><span class="nav-label">Settings</span></a>
+    </div>
+  </nav>
+  <div class="sidebar-footer">
+    <div class="sidebar-user">
+      <div class="sidebar-avatar">SA</div>
+      <div class="sidebar-user-info"><div class="sidebar-user-name">Super Admin</div><div class="sidebar-user-role">Administrator</div></div>
+    </div>
+  </div>
+</aside>
+
+<div class="admin-main">
+  <header class="topbar">
+    <button class="topbar-mobile-toggle" id="mobileSidebarToggle"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    <nav class="topbar-breadcrumb" style="flex:1">
+      <a href="dashboard.html">Dashboard</a>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      <span class="current">Bookings</span>
+    </nav>
+    <div class="topbar-search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="search" placeholder="Search bookings...">
+    </div>
+    <div class="topbar-actions">
+      <button class="topbar-action-btn" title="Notifications"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg><span class="notif-dot"></span></button>
+      <a href="../index.html" target="_blank" class="topbar-action-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+    </div>
+    <div class="topbar-user"><div class="topbar-avatar">SA</div><span class="topbar-user-name">Admin</span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div>
+  </header>
+
+  <main class="admin-content">
+
+    <div class="page-header">
+      <div>
+        <h1 class="page-title">Bookings</h1>
+        <p class="page-sub">354 total · 7 pending action · $184k revenue YTD</p>
+      </div>
+      <div class="page-header-actions">
+        <button class="btn btn-outline" id="viewToggleBtn" onclick="toggleView()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          Kanban View
+        </button>
+        <button class="btn btn-primary" onclick="openModal('addBookingModal')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          New Booking
+        </button>
+      </div>
+    </div>
+
+    <!-- SERVICE TYPE TABS -->
+    <div class="status-tabs">
+      <button class="status-tab active" data-filter="all">All Services <span class="tab-count">354</span></button>
+      <button class="status-tab" data-filter="excursion">Excursions <span class="tab-count">134</span></button>
+      <button class="status-tab" data-filter="safari">Safari <span class="tab-count">85</span></button>
+      <button class="status-tab" data-filter="transfer">Transfers <span class="tab-count">60</span></button>
+      <button class="status-tab" data-filter="hotel">Hotels <span class="tab-count">39</span></button>
+      <button class="status-tab" data-filter="visa">Visa <span class="tab-count">21</span></button>
+      <button class="status-tab" data-filter="custom">Custom <span class="tab-count">15</span></button>
+    </div>
+
+    <!-- TABLE VIEW -->
+    <div id="tableView">
+      <div class="card" style="overflow:hidden">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Booking ID</th>
+              <th>Customer</th>
+              <th>Service</th>
+              <th>Date</th>
+              <th>Pax</th>
+              <th>Amount</th>
+              <th>Payment</th>
+              <th>Status</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-status="confirmed" data-filter="excursion" data-search="AT2026-354 sarah chen dolphin tour">
+              <td style="font-family:monospace;font-size:.78rem;color:var(--gray-500)">AT2026-354</td>
+              <td><div style="display:flex;align-items:center;gap:8px"><div class="avatar av-1" style="width:28px;height:28px;font-size:.65rem">SC</div><span style="font-size:.85rem;font-weight:500">Sarah Chen</span></div></td>
+              <td><div style="font-size:.83rem;font-weight:500;color:var(--charcoal)">Dolphin Tour — Kizimkazi</div><div style="font-size:.72rem;color:var(--gray-500)">Zanzibar Excursion</div></td>
+              <td style="font-size:.82rem;color:var(--gray-600)">Jun 4, 2026</td>
+              <td style="font-size:.83rem;text-align:center">2</td>
+              <td style="font-weight:600;color:var(--forest)">$70</td>
+              <td><span class="badge" style="background:#F0FDF4;color:#15803D">Paid</span></td>
+              <td><span class="badge badge-confirmed">Confirmed</span></td>
+              <td><button class="btn-icon" onclick="openPanel('bookingPanel')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button></td>
+            </tr>
+            <tr data-status="new" data-filter="safari" data-search="AT2026-353 james okonkwo serengeti safari">
+              <td style="font-family:monospace;font-size:.78rem;color:var(--gray-500)">AT2026-353</td>
+              <td><div style="display:flex;align-items:center;gap:8px"><div class="avatar av-2" style="width:28px;height:28px;font-size:.65rem">JO</div><span style="font-size:.85rem;font-weight:500">James Okonkwo</span></div></td>
+              <td><div style="font-size:.83rem;font-weight:500;color:var(--charcoal)">Serengeti 5-Day Safari</div><div style="font-size:.72rem;color:var(--gray-500)">Safari Package</div></td>
+              <td style="font-size:.82rem;color:var(--gray-600)">Jul 12, 2026</td>
+              <td style="font-size:.83rem;text-align:center">4</td>
+              <td style="font-weight:600;color:var(--forest)">$3,200</td>
+              <td><span class="badge" style="background:#FEF3C7;color:#92400E">Deposit</span></td>
+              <td><span class="badge badge-new">New</span></td>
+              <td><button class="btn-icon" onclick="openPanel('bookingPanel')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button></td>
+            </tr>
+            <tr data-status="paid" data-filter="transfer" data-search="AT2026-352 emma mueller airport transfer zanzibar">
+              <td style="font-family:monospace;font-size:.78rem;color:var(--gray-500)">AT2026-352</td>
+              <td><div style="display:flex;align-items:center;gap:8px"><div class="avatar av-3" style="width:28px;height:28px;font-size:.65rem">EM</div><span style="font-size:.85rem;font-weight:500">Emma Müller</span></div></td>
+              <td><div style="font-size:.83rem;font-weight:500;color:var(--charcoal)">Airport Transfer — ZNZ</div><div style="font-size:.72rem;color:var(--gray-500)">Private Transfer</div></td>
+              <td style="font-size:.82rem;color:var(--gray-600)">May 28, 2026</td>
+              <td style="font-size:.83rem;text-align:center">3</td>
+              <td style="font-weight:600;color:var(--forest)">$45</td>
+              <td><span class="badge" style="background:#F0FDF4;color:#15803D">Paid</span></td>
+              <td><span class="badge badge-paid">Paid</span></td>
+              <td><button class="btn-icon" onclick="openPanel('bookingPanel')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button></td>
+            </tr>
+            <tr data-status="confirmed" data-filter="hotel" data-search="AT2026-351 david miller kisiwani house hotel">
+              <td style="font-family:monospace;font-size:.78rem;color:var(--gray-500)">AT2026-351</td>
+              <td><div style="display:flex;align-items:center;gap:8px"><div class="avatar av-4" style="width:28px;height:28px;font-size:.65rem">DM</div><span style="font-size:.85rem;font-weight:500">David Miller</span></div></td>
+              <td><div style="font-size:.83rem;font-weight:500;color:var(--charcoal)">Kisiwani House — 5 Nights</div><div style="font-size:.72rem;color:var(--gray-500)">Hotel Booking</div></td>
+              <td style="font-size:.82rem;color:var(--gray-600)">Jun 14, 2026</td>
+              <td style="font-size:.83rem;text-align:center">2</td>
+              <td style="font-weight:600;color:var(--forest)">$2,250</td>
+              <td><span class="badge" style="background:#FEF3C7;color:#92400E">Deposit</span></td>
+              <td><span class="badge badge-confirmed">Confirmed</span></td>
+              <td><button class="btn-icon" onclick="openPanel('bookingPanel')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button></td>
+            </tr>
+            <tr data-status="new" data-filter="visa" data-search="AT2026-350 aisha hassan tanzania tourist visa">
+              <td style="font-family:monospace;font-size:.78rem;color:var(--gray-500)">AT2026-350</td>
+              <td><div style="display:flex;align-items:center;gap:8px"><div class="avatar av-5" style="width:28px;height:28px;font-size:.65rem">AH</div><span style="font-size:.85rem;font-weight:500">Aisha Hassan</span></div></td>
+              <td><div style="font-size:.83rem;font-weight:500;color:var(--charcoal)">Tanzania Tourist Visa</div><div style="font-size:.72rem;color:var(--gray-500)">Visa Service</div></td>
+              <td style="font-size:.82rem;color:var(--gray-600)">Jun 1, 2026</td>
+              <td style="font-size:.83rem;text-align:center">1</td>
+              <td style="font-weight:600;color:var(--forest)">$80</td>
+              <td><span class="badge" style="background:#FEE2E2;color:#B91C1C">Unpaid</span></td>
+              <td><span class="badge badge-new">New</span></td>
+              <td><button class="btn-icon" onclick="openPanel('bookingPanel')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button></td>
+            </tr>
+            <tr data-status="completed" data-filter="excursion" data-search="AT2026-349 sophie martin stone town tour">
+              <td style="font-family:monospace;font-size:.78rem;color:var(--gray-500)">AT2026-349</td>
+              <td><div style="display:flex;align-items:center;gap:8px"><div class="avatar av-7" style="width:28px;height:28px;font-size:.65rem">SM</div><span style="font-size:.85rem;font-weight:500">Sophie Martin</span></div></td>
+              <td><div style="font-size:.83rem;font-weight:500;color:var(--charcoal)">Stone Town Cultural Tour</div><div style="font-size:.72rem;color:var(--gray-500)">Zanzibar Excursion</div></td>
+              <td style="font-size:.82rem;color:var(--gray-600)">May 10, 2026</td>
+              <td style="font-size:.83rem;text-align:center">2</td>
+              <td style="font-weight:600;color:var(--forest)">$90</td>
+              <td><span class="badge" style="background:#F0FDF4;color:#15803D">Paid</span></td>
+              <td><span class="badge badge-completed">Completed</span></td>
+              <td><button class="btn-icon" onclick="openPanel('bookingPanel')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button></td>
+            </tr>
+            <tr data-status="cancelled" data-filter="safari" data-search="AT2026-341 john smith ngorongoro safari">
+              <td style="font-family:monospace;font-size:.78rem;color:var(--gray-500)">AT2026-341</td>
+              <td><div style="display:flex;align-items:center;gap:8px"><div class="avatar av-8" style="width:28px;height:28px;font-size:.65rem">JS</div><span style="font-size:.85rem;font-weight:500">John Smith</span></div></td>
+              <td><div style="font-size:.83rem;font-weight:500;color:var(--charcoal)">Ngorongoro Day Trip</div><div style="font-size:.72rem;color:var(--gray-500)">Safari Package</div></td>
+              <td style="font-size:.82rem;color:var(--gray-600)">Apr 18, 2026</td>
+              <td style="font-size:.83rem;text-align:center">2</td>
+              <td style="font-weight:600;color:var(--gray-400)">$380</td>
+              <td><span class="badge" style="background:#F3F4F6;color:var(--gray-500)">Refunded</span></td>
+              <td><span class="badge badge-cancelled">Cancelled</span></td>
+              <td><button class="btn-icon" onclick="openPanel('bookingPanel')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button></td>
+            </tr>
+            <tr data-status="confirmed" data-filter="excursion" data-search="AT2026-348 priya sharma deep sea fishing">
+              <td style="font-family:monospace;font-size:.78rem;color:var(--gray-500)">AT2026-348</td>
+              <td><div style="display:flex;align-items:center;gap:8px"><div class="avatar av-3" style="width:28px;height:28px;font-size:.65rem">PS</div><span style="font-size:.85rem;font-weight:500">Priya Sharma</span></div></td>
+              <td><div style="font-size:.83rem;font-weight:500;color:var(--charcoal)">Deep Sea Fishing Charter</div><div style="font-size:.72rem;color:var(--gray-500)">Zanzibar Excursion</div></td>
+              <td style="font-size:.82rem;color:var(--gray-600)">Jun 8, 2026</td>
+              <td style="font-size:.83rem;text-align:center">4</td>
+              <td style="font-weight:600;color:var(--forest)">$400</td>
+              <td><span class="badge" style="background:#F0FDF4;color:#15803D">Paid</span></td>
+              <td><span class="badge badge-confirmed">Confirmed</span></td>
+              <td><button class="btn-icon" onclick="openPanel('bookingPanel')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button></td>
+            </tr>
+          </tbody>
+        </table>
+        <div style="padding:16px 20px;display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--gray-100)">
+          <span style="font-size:.8rem;color:var(--gray-500)">Showing 8 of 354 bookings</span>
+          <div style="display:flex;gap:6px">
+            <button class="btn-icon">←</button>
+            <button class="btn-icon" style="background:var(--forest);color:#fff">1</button>
+            <button class="btn-icon">2</button>
+            <button class="btn-icon">3</button>
+            <button class="btn-icon">→</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- KANBAN VIEW (hidden by default) -->
+    <div id="kanbanView" style="display:none">
+      <div class="kanban-board">
+        <!-- NEW -->
+        <div class="kanban-col">
+          <div class="kanban-col-header">
+            <span class="kanban-col-title">New</span>
+            <span class="kanban-col-count">3</span>
+          </div>
+          <div class="kcard">
+            <div class="kcard-id">AT2026-353</div>
+            <div class="kcard-title">Serengeti 5-Day Safari</div>
+            <div class="kcard-meta"><span class="avatar av-2" style="width:20px;height:20px;font-size:.55rem">JO</span> James Okonkwo</div>
+            <div class="kcard-footer">
+              <span class="badge badge-new" style="font-size:.68rem">New</span>
+              <span style="font-weight:600;font-size:.82rem;color:var(--forest)">$3,200</span>
+            </div>
+          </div>
+          <div class="kcard">
+            <div class="kcard-id">AT2026-350</div>
+            <div class="kcard-title">Tanzania Tourist Visa</div>
+            <div class="kcard-meta"><span class="avatar av-5" style="width:20px;height:20px;font-size:.55rem">AH</span> Aisha Hassan</div>
+            <div class="kcard-footer">
+              <span class="badge badge-new" style="font-size:.68rem">New</span>
+              <span style="font-weight:600;font-size:.82rem;color:var(--forest)">$80</span>
+            </div>
+          </div>
+          <div class="kcard">
+            <div class="kcard-id">AT2026-347</div>
+            <div class="kcard-title">Custom Honeymoon Package</div>
+            <div class="kcard-meta"><span class="avatar av-6" style="width:20px;height:20px;font-size:.55rem">LF</span> Luca Ferrari</div>
+            <div class="kcard-footer">
+              <span class="badge badge-new" style="font-size:.68rem">New</span>
+              <span style="font-weight:600;font-size:.82rem;color:var(--forest)">$4,800</span>
+            </div>
+          </div>
+        </div>
+        <!-- CONFIRMED -->
+        <div class="kanban-col">
+          <div class="kanban-col-header">
+            <span class="kanban-col-title">Confirmed</span>
+            <span class="kanban-col-count">4</span>
+          </div>
+          <div class="kcard">
+            <div class="kcard-id">AT2026-354</div>
+            <div class="kcard-title">Dolphin Tour — Kizimkazi</div>
+            <div class="kcard-meta"><span class="avatar av-1" style="width:20px;height:20px;font-size:.55rem">SC</span> Sarah Chen</div>
+            <div class="kcard-footer">
+              <span class="badge badge-confirmed" style="font-size:.68rem">Confirmed</span>
+              <span style="font-weight:600;font-size:.82rem;color:var(--forest)">$70</span>
+            </div>
+          </div>
+          <div class="kcard">
+            <div class="kcard-id">AT2026-351</div>
+            <div class="kcard-title">Kisiwani House — 5 Nights</div>
+            <div class="kcard-meta"><span class="avatar av-4" style="width:20px;height:20px;font-size:.55rem">DM</span> David Miller</div>
+            <div class="kcard-footer">
+              <span class="badge badge-confirmed" style="font-size:.68rem">Confirmed</span>
+              <span style="font-weight:600;font-size:.82rem;color:var(--forest)">$2,250</span>
+            </div>
+          </div>
+          <div class="kcard">
+            <div class="kcard-id">AT2026-348</div>
+            <div class="kcard-title">Deep Sea Fishing Charter</div>
+            <div class="kcard-meta"><span class="avatar av-3" style="width:20px;height:20px;font-size:.55rem">PS</span> Priya Sharma</div>
+            <div class="kcard-footer">
+              <span class="badge badge-confirmed" style="font-size:.68rem">Confirmed</span>
+              <span style="font-weight:600;font-size:.82rem;color:var(--forest)">$400</span>
+            </div>
+          </div>
+        </div>
+        <!-- PAID -->
+        <div class="kanban-col">
+          <div class="kanban-col-header">
+            <span class="kanban-col-title">Paid</span>
+            <span class="kanban-col-count">2</span>
+          </div>
+          <div class="kcard">
+            <div class="kcard-id">AT2026-352</div>
+            <div class="kcard-title">Airport Transfer — ZNZ</div>
+            <div class="kcard-meta"><span class="avatar av-3" style="width:20px;height:20px;font-size:.55rem">EM</span> Emma Müller</div>
+            <div class="kcard-footer">
+              <span class="badge badge-paid" style="font-size:.68rem">Paid</span>
+              <span style="font-weight:600;font-size:.82rem;color:var(--forest)">$45</span>
+            </div>
+          </div>
+          <div class="kcard">
+            <div class="kcard-id">AT2026-345</div>
+            <div class="kcard-title">Nungwi Beach Day Trip</div>
+            <div class="kcard-meta"><span class="avatar av-7" style="width:20px;height:20px;font-size:.55rem">SM</span> Sophie Martin</div>
+            <div class="kcard-footer">
+              <span class="badge badge-paid" style="font-size:.68rem">Paid</span>
+              <span style="font-weight:600;font-size:.82rem;color:var(--forest)">$55</span>
+            </div>
+          </div>
+        </div>
+        <!-- COMPLETED -->
+        <div class="kanban-col">
+          <div class="kanban-col-header">
+            <span class="kanban-col-title">Completed</span>
+            <span class="kanban-col-count">2</span>
+          </div>
+          <div class="kcard">
+            <div class="kcard-id">AT2026-349</div>
+            <div class="kcard-title">Stone Town Cultural Tour</div>
+            <div class="kcard-meta"><span class="avatar av-7" style="width:20px;height:20px;font-size:.55rem">SM</span> Sophie Martin</div>
+            <div class="kcard-footer">
+              <span class="badge badge-completed" style="font-size:.68rem">Completed</span>
+              <span style="font-weight:600;font-size:.82rem;color:var(--forest)">$90</span>
+            </div>
+          </div>
+          <div class="kcard">
+            <div class="kcard-id">AT2026-346</div>
+            <div class="kcard-title">Kilimanjaro 7-Day Trek</div>
+            <div class="kcard-meta"><span class="avatar av-4" style="width:20px;height:20px;font-size:.55rem">DM</span> David Miller</div>
+            <div class="kcard-footer">
+              <span class="badge badge-completed" style="font-size:.68rem">Completed</span>
+              <span style="font-weight:600;font-size:.82rem;color:var(--forest)">$2,800</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+</div>
+
+<!-- BOOKING DETAIL PANEL -->
+<div class="detail-panel" id="bookingPanel">
+  <div class="detail-panel-header">
+    <div>
+      <h2 class="detail-panel-title">AT2026-354</h2>
+      <p style="font-size:.8rem;color:var(--gray-500);margin-top:2px">Dolphin Tour · Kizimkazi</p>
+    </div>
+    <button class="detail-panel-close" onclick="closePanel('bookingPanel')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div style="padding:24px;flex:1;overflow-y:auto">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px">
+      <div class="card" style="padding:12px"><div style="font-size:.7rem;color:var(--gray-500);margin-bottom:4px">Customer</div><div style="font-size:.88rem;font-weight:600;color:var(--charcoal)">Sarah Chen</div></div>
+      <div class="card" style="padding:12px"><div style="font-size:.7rem;color:var(--gray-500);margin-bottom:4px">Travel Date</div><div style="font-size:.88rem;font-weight:600;color:var(--charcoal)">Jun 4, 2026</div></div>
+      <div class="card" style="padding:12px"><div style="font-size:.7rem;color:var(--gray-500);margin-bottom:4px">Pax</div><div style="font-size:.88rem;font-weight:600;color:var(--charcoal)">2 Adults</div></div>
+      <div class="card" style="padding:12px"><div style="font-size:.7rem;color:var(--gray-500);margin-bottom:4px">Total</div><div style="font-size:.88rem;font-weight:600;color:var(--forest)">$70.00</div></div>
+    </div>
+    <div style="margin-bottom:16px">
+      <div style="font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--gray-400);margin-bottom:8px">Update Status</div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <button class="btn btn-outline" style="font-size:.76rem;padding:6px 10px" onclick="toast('Status updated to Confirmed','success')">Confirmed</button>
+        <button class="btn btn-outline" style="font-size:.76rem;padding:6px 10px" onclick="toast('Status updated to Paid','success')">Paid</button>
+        <button class="btn btn-outline" style="font-size:.76rem;padding:6px 10px" onclick="toast('Status updated to Completed','success')">Completed</button>
+        <button class="btn btn-outline" style="font-size:.76rem;padding:6px 10px;color:var(--red)" onclick="toast('Booking cancelled','error')">Cancel</button>
+      </div>
+    </div>
+    <div>
+      <div style="font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--gray-400);margin-bottom:8px">Notes</div>
+      <textarea style="width:100%;padding:10px 12px;border:1px solid var(--gray-200);border-radius:8px;font-size:.83rem;font-family:inherit;resize:vertical;min-height:80px;color:var(--charcoal);background:var(--bg)" placeholder="Add booking notes…">Meeting point: Kizimkazi Dimbani beach 6:30am. Includes snorkeling gear.</textarea>
+      <button class="btn btn-primary" style="margin-top:8px;font-size:.8rem" onclick="toast('Notes saved','success')">Save</button>
+    </div>
+  </div>
+</div>
+
+<!-- ADD BOOKING MODAL -->
+<div class="modal-overlay" id="addBookingModal">
+  <div class="modal">
+    <div class="modal-header">
+      <h3 class="modal-title">New Booking</h3>
+      <button class="modal-close" onclick="closeModal('addBookingModal')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    </div>
+    <div class="modal-body">
+      <div class="form-group"><label class="form-label">Customer</label><input class="form-input" type="text" placeholder="Search or select customer…"></div>
+      <div class="form-group"><label class="form-label">Service Type</label><select class="form-select"><option>Zanzibar Excursion</option><option>Safari Package</option><option>Airport Transfer</option><option>Hotel Booking</option><option>Visa Service</option><option>Custom Trip</option></select></div>
+      <div class="form-group"><label class="form-label">Service / Tour</label><input class="form-input" type="text" placeholder="e.g. Dolphin Tour — Kizimkazi"></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+        <div class="form-group"><label class="form-label">Travel Date</label><input class="form-input" type="date"></div>
+        <div class="form-group"><label class="form-label">No. of Pax</label><input class="form-input" type="number" min="1" value="2"></div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+        <div class="form-group"><label class="form-label">Amount ($)</label><input class="form-input" type="number" placeholder="0.00"></div>
+        <div class="form-group"><label class="form-label">Payment Status</label><select class="form-select"><option>Unpaid</option><option>Deposit</option><option>Paid</option></select></div>
+      </div>
+      <div class="form-group"><label class="form-label">Notes</label><textarea class="form-input" rows="2" placeholder="Special requests, meeting points…"></textarea></div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-outline" onclick="closeModal('addBookingModal')">Cancel</button>
+      <button class="btn btn-primary" onclick="toast('Booking created successfully','success');closeModal('addBookingModal')">Create Booking</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/admin.js"></script>
+<script src="js/crm-admin.js"></script>
+<script>
+  function toggleView() {
+    const tv = document.getElementById('tableView');
+    const kv = document.getElementById('kanbanView');
+    const btn = document.getElementById('viewToggleBtn');
+    if (tv.style.display === 'none') {
+      tv.style.display = '';
+      kv.style.display = 'none';
+      btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg> Kanban View';
+    } else {
+      tv.style.display = 'none';
+      kv.style.display = '';
+      btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg> Table View';
+    }
+  }
+</script>
+</body>
+</html>
